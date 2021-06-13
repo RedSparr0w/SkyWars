@@ -8,38 +8,33 @@
 #---------------------------------
 
 # Clear all tags first
-tag @s remove 1
-tag @s remove 2
-tag @s remove 3
-tag @s remove 4
-tag @s remove 5
-tag @s remove 6
-tag @s remove 7
-tag @s remove 8
-tag @s remove 9
-tag @s remove 10
-tag @s remove 11
-tag @s remove 12
+tag @s remove sw1
+tag @s remove sw2
+tag @s remove sw3
+tag @s remove sw4
+tag @s remove sw5
+tag @s remove sw6
+tag @s remove sw7
+tag @s remove sw8
+tag @s remove sw9
+tag @s remove sw10
+tag @s remove sw11
+tag @s remove sw12
 
 # Add spawn position tags to player
-execute if score currentTag tags matches 1 run tag @s add 1
-execute if score currentTag tags matches 2 run tag @s add 2
-execute if score currentTag tags matches 3 run tag @s add 3
-execute if score currentTag tags matches 4 run tag @s add 4
-execute if score currentTag tags matches 5 run tag @s add 5
-execute if score currentTag tags matches 6 run tag @s add 6
-execute if score currentTag tags matches 7 run tag @s add 7
-execute if score currentTag tags matches 8 run tag @s add 8
-execute if score currentTag tags matches 9 run tag @s add 9
-execute if score currentTag tags matches 10 run tag @s add 10
-execute if score currentTag tags matches 11 run tag @s add 11
-execute if score currentTag tags matches 12 run tag @s add 12
-
-# Increment tags
-execute unless entity @s[team=ready] run scoreboard players add currentTag tags 1
-execute if score currentTag tags matches 13.. run scoreboard players remove currentTag tags 12
+execute unless entity @a[tag=sw1] run tag @s add sw1
+execute unless entity @a[tag=sw2] run tag @s add sw2
+execute unless entity @a[tag=sw3] run tag @s add sw3
+execute unless entity @a[tag=sw4] run tag @s add sw4
+execute unless entity @a[tag=sw5] run tag @s add sw5
+execute unless entity @a[tag=sw6] run tag @s add sw6
+execute unless entity @a[tag=sw7] run tag @s add sw7
+execute unless entity @a[tag=sw8] run tag @s add sw8
+execute unless entity @a[tag=sw9] run tag @s add sw9
+execute unless entity @a[tag=sw10] run tag @s add sw10
+execute unless entity @a[tag=sw11] run tag @s add sw11
+execute unless entity @a[tag=sw12] run tag @s add sw12
 
 # Final commands
-execute unless entity @s[team=ready] runscoreboard players add count players_ready 1
 tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
 team join ready @s
