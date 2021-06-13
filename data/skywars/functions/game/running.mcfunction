@@ -8,8 +8,9 @@
 #---------------------------------#
 
 # Player count test
-execute store result score alive sw.players if entity @e[team=playing,nbt={Dimension:"skywars:skywars"}]
+execute store result score lobby sw.players if entity @e[team=lobby,nbt={Dimension:"skywars:skywars"}]
 execute store result score ready sw.players if entity @e[team=ready,nbt={Dimension:"skywars:skywars"}]
+execute store result score alive sw.players if entity @e[team=playing,nbt={Dimension:"skywars:skywars"}]
 execute if score alive sw.players matches 1 run function skywars:winner
 
 # Lobby hotbar

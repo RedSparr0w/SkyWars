@@ -41,8 +41,6 @@ scoreboard objectives add sw.kit trigger
 scoreboard objectives add sw.cage trigger
 # Show main menu
 scoreboard objectives add sw.menu trigger
-# Show settings menu
-scoreboard objectives add sw.settings trigger
 # Show datapack information
 scoreboard objectives add sw.info trigger
 # Join lobby
