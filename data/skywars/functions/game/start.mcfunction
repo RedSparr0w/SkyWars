@@ -1,12 +1,3 @@
-#---------------------------------
-#                                 
-#      SKYWARS : GOLD RUSH        
-#          by Nixinova            
-#                                 
-#      Game starting commands      
-#                                 
-#---------------------------------
-
 tellraw @a[nbt={Dimension:"skywars:skywars"}] {"text":"Game starting!","color":"green"}
 title @a[nbt={Dimension:"skywars:skywars"}] title {"text":"Game starting!","color":"green"}
 

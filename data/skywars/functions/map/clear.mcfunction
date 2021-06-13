@@ -1,12 +1,3 @@
-#---------------------------------
-#                                 
-#      SKYWARS : GOLD RUSH        
-#          by Nixinova            
-#                                 
-#      Map clearing commands      
-#                                 
-#---------------------------------
-
 execute in skywars:skywars run kill @e[type=!player,distance=..500]
 execute in skywars:skywars run fill 104 126 -80 -56 126 80 barrier
 execute in skywars:skywars run fill 104 125 -80 -56 125 80 air

@@ -1,12 +1,3 @@
-#---------------------------------#
-#                                 #
-#      SKYWARS : GOLD RUSH        #
-#          by Nixinova            #
-#                                 #
-#       World initialisation      #
-#                                 #
-#---------------------------------#
-
 ### SETUP ###
 
 #> Teams
@@ -34,7 +25,6 @@ scoreboard objectives setdisplay sidebar.team.yellow sw.wins
 scoreboard players set #minimum sw.players 2
 
 #> Triggers
-#### TODO: all these triggers
 # Starting kits
 scoreboard objectives add sw.kit trigger
 # Starting Cage

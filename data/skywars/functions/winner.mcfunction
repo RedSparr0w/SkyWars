@@ -1,11 +1,4 @@
-#---------------------------------
-#                                 
-#      SKYWARS : GOLD RUSH        
-#          by Nixinova            
-#                                 
-#       Finishing commands      
-#                                 
-#---------------------------------
+# TODO: Delay TP of winner, summon fireworks
 
 execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] unless entity @s[scores={sw.deaths=1..}] run tag @s add winner
 scoreboard players add @a[tag=winner] sw.wins 1
