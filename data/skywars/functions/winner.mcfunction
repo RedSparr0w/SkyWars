@@ -14,7 +14,7 @@ tellraw @a[nbt={Dimension:"skywars:skywars"}] ["",{"selector":"@a[team=playing]"
 title @a[nbt={Dimension:"skywars:skywars"}] title {"selector":"@a[team=playing]","color":"green"}
 title @a[nbt={Dimension:"skywars:skywars"}] subtitle {"text":"has won!","color":"green"}
 
-tp @a[nbt={Dimension:"skywars:skywars"}] 25 138 1
-gamemode adventure @a[nbt={Dimension:"skywars:skywars"}]
-team join lobby @a[nbt={Dimension:"skywars:skywars"}]
 clear @a[nbt={Dimension:"skywars:skywars"}]
+team join lobby @a[nbt={Dimension:"skywars:skywars"}]
+gamemode adventure @a[nbt={Dimension:"skywars:skywars"}]
+execute in skywars:skywars run tp @a[nbt={Dimension:"skywars:skywars"}] 25 138 1
