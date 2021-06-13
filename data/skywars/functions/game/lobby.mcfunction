@@ -1,15 +1,16 @@
 # Reset the scoreboard so this isn't run multiple times
 scoreboard players set @s sw.lobby 0
+scoreboard players set #errors sw.dummy 0
+scoreboard players set #inventory sw.dummy 0
 
-# TODO: Check inventory empty and player is in overworld
+# Check player in overworld
+execute unless entity @s[nbt={Dimension:"minecraft:overworld"}] run tellraw @s [{"text":"You must be in the overworld to go to the SkyWars lobby!","color":"red"}]
+execute unless entity @s[nbt={Dimension:"minecraft:overworld"}] run scoreboard players add #errors sw.dummy 1
 
-# Store players position
-execute store result score @s sw.pos.x run data get entity @s Pos[0]
-execute store result score @s sw.pos.y run data get entity @s Pos[1]
-execute store result score @s sw.pos.z run data get entity @s Pos[2]
+# Check inventory is empty
+execute store result score #inventory sw.dummy run data get entity @s Inventory
+execute unless score #inventory sw.dummy matches 0 run tellraw @s [{"text":"Inventory must be empty to go to the SkyWars lobby!","color":"red"}]
+execute unless score #inventory sw.dummy matches 0 run scoreboard players add #errors sw.dummy 1
 
-execute in skywars:skywars run spawnpoint @s 26 139 0
-execute in skywars:skywars run tp @s 26.5 139 0.5 0 0
-
-gamemode adventure @s
-team join lobby @s
+# TP to lobby if no errors
+execute if score #errors sw.dummy matches 0 run function skywars:game/lobby/success

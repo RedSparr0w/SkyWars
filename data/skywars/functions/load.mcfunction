@@ -20,14 +20,13 @@ team add playing
 team modify playing color red
 
 #> Scoreboards
+scoreboard objectives add sw.dummy dummy
 scoreboard objectives add sw.pos.x dummy
 scoreboard objectives add sw.pos.y dummy
 scoreboard objectives add sw.pos.z dummy
 scoreboard objectives add sw.kills playerKillCount "Kills"
 scoreboard objectives add sw.wins dummy "Wins"
-scoreboard objectives add cage dummy "CageID"
 scoreboard objectives add players dummy "Players"
-scoreboard objectives add kit dummy "KitID"
 scoreboard objectives add health health "HP"
 scoreboard objectives add sw.deaths deathCount "SkyWars Deaths"
 scoreboard objectives setdisplay sidebar.team.red sw.kills
@@ -35,6 +34,10 @@ scoreboard players set #minimum players 2
 
 #> Triggers
 #### TODO: all these triggers
+# Starting kits
+scoreboard objectives add sw.kit trigger
+# Starting Cage
+scoreboard objectives add sw.cage trigger
 # Show main menu
 scoreboard objectives add sw.menu trigger
 # Show settings menu

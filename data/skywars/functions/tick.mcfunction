@@ -13,6 +13,8 @@ scoreboard players enable @a sw.lobby
 scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.ready
 scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.startgame
 scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.leave
+scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.kit
+scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.cage
 
 #> Run sub function ticks
 function skywars:game/running
