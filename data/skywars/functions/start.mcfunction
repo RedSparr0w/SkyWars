@@ -114,3 +114,6 @@ give @a[team=playing,scores={kit=7}] bread 8
 # Fisherman
 give @a[team=playing,scores={kit=8}] fishing_rod{Enchantments:[{id:"minecraft:knockback",lvl:1}]}
 give @a[team=playing,scores={kit=8}] cod 12
+
+# Change to survival mode
+gamemode survival @a[team=playing]

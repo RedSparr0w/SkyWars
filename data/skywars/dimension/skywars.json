@@ -1,0 +1,18 @@
+{
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "structures": {
+        "structures": {}
+      },
+      "layers": [
+        {
+          "block": "minecraft:air",
+          "height": 1
+        }
+      ],
+      "biome": "minecraft:the_void"
+    }
+  },
+  "type": "skywars:void"
+}

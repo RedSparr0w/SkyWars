@@ -36,11 +36,11 @@ execute if score currentTag tags matches 11 run tag @s add 11
 execute if score currentTag tags matches 12 run tag @s add 12
 
 # Increment tags
-scoreboard players add currentTag tags 1
+execute unless entity @s[team=ready] run scoreboard players add currentTag tags 1
 execute if score currentTag tags matches 13.. run scoreboard players remove currentTag tags 12
 
 # Final commands
+execute unless entity @s[team=ready] runscoreboard players add count players_ready 1
 execute unless score @s ready matches 1 run tellraw @a [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
 scoreboard players set @s ready 1
 team join ready @s
-scoreboard players add count players_ready 1
