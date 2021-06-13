@@ -28,6 +28,9 @@ scoreboard objectives add sw.wins dummy "Wins"
 scoreboard objectives add sw.players dummy "Players"
 scoreboard objectives add sw.deaths deathCount "SkyWars Deaths"
 scoreboard objectives setdisplay sidebar.team.red sw.players
+scoreboard objectives setdisplay sidebar.team.gray sw.players
+scoreboard objectives setdisplay sidebar.team.green sw.players
+scoreboard objectives setdisplay sidebar.team.yellow sw.wins
 scoreboard players set #minimum sw.players 2
 
 #> Triggers
