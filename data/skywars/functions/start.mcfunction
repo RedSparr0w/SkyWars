@@ -9,11 +9,10 @@
 
 scoreboard players set ingame players 1
 
-tellraw @a {"text":"Game starting!","color":"green"}
-title @a title {"text":"Game starting!","color":"green"}
+tellraw @a[nbt={Dimension:"skywars:skywars"}] {"text":"Game starting!","color":"green"}
+title @a[nbt={Dimension:"skywars:skywars"}] title {"text":"Game starting!","color":"green"}
 
-team join playing @a[team=ready]
-scoreboard players reset @a ready
+team join playing @a[team=ready,nbt={Dimension:"skywars:skywars"}]
 scoreboard players reset @a kills
 scoreboard players reset count players_ready
 clear @a[team=playing]
@@ -22,13 +21,13 @@ effect give @a[team=playing] minecraft:resistance 15 4
 
 setblock 24 206 7 redstone_block
 
-#tellraw @a[team=playing] {"text":"Resetting map, expect lag...","color":"red","italic":true}
-title @a[team=playing] actionbar {"text":"Resetting map","color":"red"}
-function skywars:goldrush/clearmap
-title @a[team=playing] actionbar {"text":"Map cleared.","color":"green"}
-title @a[team=playing] actionbar {"text":"Loading new map...","color":"yellow"}
-function skywars:goldrush/loadmap
-title @a[team=playing] actionbar {"text":"Map loaded.","color":"green"}
+#tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] {"text":"Resetting map, expect lag...","color":"red","italic":true}
+title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Resetting map","color":"red"}
+function skywars:clearmap
+title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map cleared.","color":"green"}
+title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Loading new map...","color":"yellow"}
+function skywars:loadmap
+title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map loaded.","color":"green"}
 
 # Starting positions
 tp @a[tag=1] 61 74 26
@@ -59,7 +58,7 @@ tag @a[team=playing] remove 11
 tag @a[team=playing] remove 12
 
 # Cages
-execute as @a[team=playing] at @s run setblock ~ 77 ~ glass
+execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run setblock ~ 77 ~ glass
 execute as @a[scores={cage=0}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 glass replace glass
 execute as @a[scores={cage=1}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 barrier replace glass
 execute as @a[scores={cage=2}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 light_blue_stained_glass replace glass

@@ -33,6 +33,8 @@ scoreboard objectives add tags dummy "Tags"
 scoreboard objectives setdisplay sidebar.team.red kills
 scoreboard players set limit players_ready 2
 
+### Force Load area needed ###
+execute in skywars:skywars run forceload add 0 0
 
 ### LOBBY ###
 
@@ -42,8 +44,8 @@ execute in skywars:skywars run fill 33 137 -7 19 137 7 white_stained_glass
 execute in skywars:skywars run fill 33 142 -7 19 142 7 white_stained_glass
 
 # Signs
-execute in skywars:skywars run setblock 27 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function skywars:goldrush/startsign"}}',Text2:'{"text":"Start","color":"green"}'}
-execute in skywars:skywars run setblock 25 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function skywars:goldrush/ready"}}',Text2:'{"text":"Ready","color":"yellow"}'}
+execute in skywars:skywars run setblock 27 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function skywars:startsign"}}',Text2:'{"text":"Start","color":"green"}'}
+execute in skywars:skywars run setblock 25 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function skywars:ready"}}',Text2:'{"text":"Ready","color":"yellow"}'}
 execute in skywars:skywars run setblock 27 139 6 oak_wall_sign{Text2:'{"text":"Made by","color":"white"}',Text3:'{"text":"Nixinova","color":"aqua"}'}
 execute in skywars:skywars run setblock 25 139 6 oak_wall_sign{Text2:'{"text":"SkyWars v2.2","color":"green"}',Text3:'{"text":"Minecraft 1.17","color":"aqua"}'}
 
@@ -56,7 +58,7 @@ execute in skywars:skywars run setblock 26 139 6 player_wall_head{SkullOwner:{Na
 execute in skywars:skywars run fill 22 205 9 28 205 -5 light_blue_terracotta
 
 # Ticker
-execute in skywars:skywars run setblock 25 206 6 repeating_command_block{Command:"function skywars:goldrush/running",auto:true}
+execute in skywars:skywars run setblock 25 206 6 repeating_command_block{Command:"function skywars:running",auto:true}
 
 # Bridge
 execute in skywars:skywars run setblock 27 206 2 structure_block{mode:LOAD,name:"skywars:bridge-w",posX:-11,posY:-12,posZ:-2}
@@ -97,6 +99,6 @@ execute in skywars:skywars run setblock 25 206 -4 structure_block{mode:LOAD,name
 execute in skywars:skywars run setblock 24 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s4",posX:-5,posY:-18,posZ:-6}
 
 # Starting text
-execute in skywars:skywars run setblock 25 206 7 command_block{Command:"setblock ~-1 ~ ~ air"}
-execute in skywars:skywars run setblock 24 206 6 command_block{Command:'tellraw @a[team=playing] ["",{"text":"Starting!","color":"yellow"}]'}
-execute in skywars:skywars run setblock 24 206 8 command_block{Command:"execute as @a[team=playing] at @s run fill ~ ~ ~ ~ ~-3 ~ air"}
+execute in skywars:skywars run setblock 25 206 7 command_block{Command:'setblock ~-1 ~ ~ air'}
+execute in skywars:skywars run setblock 24 206 6 command_block{Command:'tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] ["",{"text":"Starting!","color":"yellow"}]'}
+execute in skywars:skywars run setblock 24 206 8 command_block{Command:'execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~ ~ ~ ~-3 ~ air'}

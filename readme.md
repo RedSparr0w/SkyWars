@@ -20,5 +20,5 @@ SkyWars is a 12-player PvP game where players spawn on separate islands, gather 
 4. Drag and drop the zip file into the datapacks menu.
 5. Create the world.
 6. Enable the datapack using `/datapack enable <press tab>`.
-7. Initialize the world using `/function skywars:goldrush/init`.
-8. Invite your friends and play SkyWars, or type `/function skywars:goldrush/start` to investigate the map by yourself.
+7. Initialize the world using `/function skywars:init`.
+8. Invite your friends and play SkyWars, or type `/function skywars:start` to investigate the map by yourself.

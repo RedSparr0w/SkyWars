@@ -146,6 +146,6 @@ execute in skywars:skywars run clone 26 206 -3 26 206 -3 78 77 11 replace
 execute in skywars:skywars run setblock 78 78 11 redstone_block
 execute in skywars:skywars run fill 78 77 11 78 78 11 air
 
-title @a actionbar [{"text":"Loading map: ","color":"yellow"},{"text":"100% complete","color":"green"}]
+title @a[nbt={Dimension:"skywars:skywars"}] actionbar [{"text":"Loading map: ","color":"yellow"},{"text":"100% complete","color":"green"}]
 
-kill @e[type=item]
+kill @e[type=item,nbt={Dimension:"skywars:skywars"}]
