@@ -116,8 +116,3 @@ execute in skywars:skywars run setblock 27 206 -4 structure_block{mode:LOAD,name
 execute in skywars:skywars run setblock 26 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s2",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 25 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s3",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 24 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s4",posX:-5,posY:-18,posZ:-6}
-
-# Starting text
-execute in skywars:skywars run setblock 25 206 7 command_block{Command:"setblock ~-1 ~ ~ air"}
-execute in skywars:skywars run setblock 24 206 6 command_block{Command:'tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] ["",{"text":"Starting!","color":"yellow"}]'}
-execute in skywars:skywars run setblock 24 206 8 command_block{Command:'execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~ ~ ~ ~-3 ~ air'}

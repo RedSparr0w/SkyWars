@@ -148,4 +148,4 @@ execute in skywars:skywars run fill 78 77 11 78 78 11 air
 
 title @a[nbt={Dimension:"skywars:skywars"}] actionbar [{"text":"Loading map: ","color":"yellow"},{"text":"100% complete","color":"green"}]
 
-kill @e[type=item,nbt={Dimension:"skywars:skywars"}]
+execute in skywars:skywars run kill @e[type=item,distance=..500]

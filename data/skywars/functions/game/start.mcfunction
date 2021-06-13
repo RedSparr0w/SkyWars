@@ -17,8 +17,6 @@ effect clear @a[team=playing]
 gamemode adventure @a[team=playing]
 effect give @a[team=playing] minecraft:resistance 15 4
 
-setblock 24 206 7 redstone_block
-
 #tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] {"text":"Resetting map, expect lag...","color":"red","italic":true}
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Resetting map","color":"red"}
 function skywars:map/clear
@@ -111,6 +109,9 @@ give @a[team=playing,scores={sw.kit=7}] bread 8
 # Fisherman
 give @a[team=playing,scores={sw.kit=8}] fishing_rod{Enchantments:[{id:"minecraft:knockback",lvl:1}]}
 give @a[team=playing,scores={sw.kit=8}] cod 12
+
+tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] {"text":"Starting!","color":"yellow"}
+execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~ ~ ~ ~-3 ~ air
 
 # Change to survival mode
 gamemode survival @a[team=playing]
