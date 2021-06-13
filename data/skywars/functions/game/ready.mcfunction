@@ -1,8 +1,6 @@
 # Reset the scoreboard so this isn't run multiple times
 scoreboard players set @s sw.ready 0
 
-# TODO: check if game already in progress
-
 # Only announce ready if player not already ready
 execute unless entity @s[team=ready] run tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
 team join lobby @s
