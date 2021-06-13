@@ -11,7 +11,7 @@ tellraw @a[nbt={Dimension:"skywars:skywars"}] {"text":"Game starting!","color":"
 title @a[nbt={Dimension:"skywars:skywars"}] title {"text":"Game starting!","color":"green"}
 
 team join playing @a[team=ready,nbt={Dimension:"skywars:skywars"}]
-scoreboard players reset @a sw.kills
+scoreboard players set @a sw.deaths 0
 clear @a[team=playing]
 effect clear @a[team=playing]
 gamemode adventure @a[team=playing]

@@ -24,13 +24,11 @@ scoreboard objectives add sw.dummy dummy
 scoreboard objectives add sw.pos.x dummy
 scoreboard objectives add sw.pos.y dummy
 scoreboard objectives add sw.pos.z dummy
-scoreboard objectives add sw.kills playerKillCount "Kills"
 scoreboard objectives add sw.wins dummy "Wins"
-scoreboard objectives add players dummy "Players"
-scoreboard objectives add health health "HP"
+scoreboard objectives add sw.players dummy "Players"
 scoreboard objectives add sw.deaths deathCount "SkyWars Deaths"
-scoreboard objectives setdisplay sidebar.team.red sw.kills
-scoreboard players set #minimum players 2
+scoreboard objectives setdisplay sidebar.team.red sw.players
+scoreboard players set #minimum sw.players 2
 
 #> Triggers
 #### TODO: all these triggers

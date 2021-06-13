@@ -8,8 +8,9 @@
 #---------------------------------#
 
 # Player count test
-execute store result score alive players if entity @e[team=playing,nbt={Dimension:"skywars:skywars"}]
-execute if score alive players matches 1 run function skywars:winner
+execute store result score alive sw.players if entity @e[team=playing,nbt={Dimension:"skywars:skywars"}]
+execute store result score ready sw.players if entity @e[team=ready,nbt={Dimension:"skywars:skywars"}]
+execute if score alive sw.players matches 1 run function skywars:winner
 
 # Lobby hotbar
 execute in skywars:skywars run item replace entity @a[team=!spectator,x=25,y=138,z=1,distance=..10] hotbar.0 with diamond_sword{display:{Name:'"\\u00A7eLobby Blade"',Lore:['"\\u00A7cFight in the lobby!"']},Enchantments:[{id:"knockback",lvl:2}],Unbreakable:true,HideFlags:127}
@@ -30,6 +31,5 @@ execute in skywars:skywars run effect give @a[x=25,y=138,z=1,distance=..10,nbt={
 # Death commands
 team join spectator @a[team=playing,scores={sw.deaths=1..},nbt={Dimension:"skywars:skywars"}]
 gamemode spectator @a[team=spectator,nbt={Dimension:"skywars:skywars"}]
-scoreboard players reset * sw.deaths
-# kill players if they fall below y=0
-kill @a[team=playing,x=0,y=-256,z=0,distance=..256,nbt={Dimension:"skywars:skywars"}]
+
+# TODO: Instantly kill players if they fall below y=0

@@ -50,5 +50,5 @@ execute if entity @s[tag=sw12] run team join ready @s
 # Final commands
 
 # Check how many players are ready
-scoreboard players set ready players 0
-execute as @a[team=ready] run scoreboard players add ready players 1
+scoreboard players set ready sw.players 0
+execute as @a[team=ready] run scoreboard players add ready sw.players 1

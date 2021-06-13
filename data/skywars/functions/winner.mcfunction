@@ -7,13 +7,15 @@
 #                                 
 #---------------------------------
 
-scoreboard players add @a[team=playing] sw.wins 1
-scoreboard players reset * sw.deaths
+execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] unless entity @s[scores={sw.deaths=1..}] run tag @s add winner
+scoreboard players add @a[tag=winner] sw.wins 1
+scoreboard players set @a sw.deaths 0
 
-tellraw @a[nbt={Dimension:"skywars:skywars"}] ["",{"selector":"@a[team=playing]","color":"green"},{"text":" has won!","color":"green"}]
-title @a[nbt={Dimension:"skywars:skywars"}] title {"selector":"@a[team=playing]","color":"green"}
+tellraw @a[nbt={Dimension:"skywars:skywars"}] ["",{"selector":"@a[tag=winner]","color":"green"},{"text":" has won!","color":"green"}]
+title @a[nbt={Dimension:"skywars:skywars"}] title {"selector":"@a[tag=winner]","color":"green"}
 title @a[nbt={Dimension:"skywars:skywars"}] subtitle {"text":"has won!","color":"green"}
 
+tag @a[tag=winner] remove winner
 clear @a[nbt={Dimension:"skywars:skywars"}]
 team join lobby @a[nbt={Dimension:"skywars:skywars"}]
 gamemode adventure @a[nbt={Dimension:"skywars:skywars"}]
