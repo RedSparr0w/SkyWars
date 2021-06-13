@@ -25,9 +25,9 @@ execute in skywars:skywars run item replace entity @a[team=!spectator,x=25,y=138
 execute in skywars:skywars run item replace entity @a[team=!spectator,x=25,y=138,z=1,distance=..10] hotbar.8 with air
 
 # Lobby commands
-execute in skywars:skywars run kill @e[type=item,x=25,y=138,z=1,distance=..10]
-execute in skywars:skywars run effect give @a[x=25,y=138,z=1,distance=..10,nbt={Dimension:"skywars:skywars"}] minecraft:instant_health 1 10 true
-execute in skywars:skywars run effect give @a[x=25,y=138,z=1,distance=..10,nbt={Dimension:"skywars:skywars"}] minecraft:saturation 1 10 true
+execute in skywars:skywars run kill @e[type=item,x=25,y=138,z=1,distance=..11]
+execute in skywars:skywars run effect give @a[x=25,y=138,z=1,distance=..11,nbt={Dimension:"skywars:skywars"}] minecraft:instant_health 1 10 true
+execute in skywars:skywars run effect give @a[x=25,y=138,z=1,distance=..11,nbt={Dimension:"skywars:skywars"}] minecraft:saturation 1 10 true
 
 # Death commands
 team join spectator @a[team=playing,scores={sw.deaths=1..},nbt={Dimension:"skywars:skywars"}]
