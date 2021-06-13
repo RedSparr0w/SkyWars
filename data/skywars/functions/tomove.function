@@ -1,4 +1,0 @@
-
-setworldspawn 25 139 1
-spawnpoint @a[nbt={Dimension:"skywars:skywars"}] 25 139 1
-tp @a[nbt={Dimension:"skywars:skywars"}] 25 139 1

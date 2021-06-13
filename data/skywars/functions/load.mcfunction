@@ -9,7 +9,7 @@
 
 ### SETUP ###
 
-# Teams
+#> Teams
 team add lobby
 team modify lobby color yellow
 team add ready
@@ -19,12 +19,11 @@ team modify spectator color gray
 team add playing
 team modify playing color red
 
-# Scoreboards
+#> Scoreboards
 scoreboard objectives add kills playerKillCount "Kills"
 scoreboard objectives add wins dummy "Wins"
 scoreboard objectives add players_ready dummy "Players Needed"
 scoreboard objectives add cage dummy "CageID"
-scoreboard objectives add ready dummy "Ready"
 scoreboard objectives add players dummy "Players"
 scoreboard objectives add kit dummy "KitID"
 scoreboard objectives add health health "HP"
@@ -33,7 +32,22 @@ scoreboard objectives add tags dummy "Tags"
 scoreboard objectives setdisplay sidebar.team.red kills
 scoreboard players set limit players_ready 2
 
-### Force Load area needed ###
+#> Triggers
+#### TODO: all these triggers
+# Show main menu
+scoreboard objectives add sw.menu trigger
+# Show settings menu
+scoreboard objectives add sw.settings trigger
+# Show datapack information
+scoreboard objectives add sw.info trigger
+# Join lobby
+scoreboard objectives add sw.lobby trigger
+# Ready up
+scoreboard objectives add sw.ready trigger
+# Start game
+scoreboard objectives add sw.startgame trigger
+
+#> Force Load area needed
 execute in skywars:skywars run forceload add 0 0
 
 ### LOBBY ###
@@ -44,13 +58,14 @@ execute in skywars:skywars run fill 33 137 -7 19 137 7 white_stained_glass
 execute in skywars:skywars run fill 33 142 -7 19 142 7 white_stained_glass
 
 # Signs
-execute in skywars:skywars run setblock 27 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function skywars:startsign"}}',Text2:'{"text":"Start","color":"green"}'}
-execute in skywars:skywars run setblock 25 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function skywars:ready"}}',Text2:'{"text":"Ready","color":"yellow"}'}
-execute in skywars:skywars run setblock 27 139 6 oak_wall_sign{Text2:'{"text":"Made by","color":"white"}',Text3:'{"text":"Nixinova","color":"aqua"}'}
-execute in skywars:skywars run setblock 25 139 6 oak_wall_sign{Text2:'{"text":"SkyWars v2.2","color":"green"}',Text3:'{"text":"Minecraft 1.17","color":"aqua"}'}
+execute in skywars:skywars run setblock 27 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger sw.menu"}}',Text2:'{"text":"Start","color":"green"}'}
+execute in skywars:skywars run setblock 25 139 -6 oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger sw.ready"}}',Text2:'{"text":"Ready","color":"yellow"}'}
+execute in skywars:skywars run setblock 27 139 6 oak_wall_sign{Text1:'{"text":"Made by","color":"white"}',Text2:'{"text":"Nixinova","color":"aqua"}',Text3:'{"text":"RedSparr0vv","color":"red"}'}
+execute in skywars:skywars run setblock 25 139 6 oak_wall_sign{Text2:'{"text":"SkyWars v3.0","color":"green"}',Text3:'{"text":"Minecraft 1.17","color":"aqua"}'}
 
 # Credit
-execute in skywars:skywars run setblock 26 139 6 player_wall_head{SkullOwner:{Name:"Nixinova"}}
+execute in skywars:skywars run setblock 27 140 6 player_wall_head{SkullOwner:{Name:"RedSparr0vv"}}
+execute in skywars:skywars run setblock 26 140 6 player_wall_head{SkullOwner:{Name:"Nixinova"}}
 
 ### MAP LOADING ###
 

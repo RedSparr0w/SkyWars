@@ -42,5 +42,4 @@ execute if score currentTag tags matches 13.. run scoreboard players remove curr
 # Final commands
 execute unless entity @s[team=ready] runscoreboard players add count players_ready 1
 tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
-scoreboard players set @s ready 1
 team join ready @s
