@@ -29,4 +29,4 @@ scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.cage
 scoreboard players reset @a[nbt=!{Dimension:"skywars:skywars"}] sw.cage
 
 #> Run sub function ticks
-function skywars:game/running
+function skywars:game/tick

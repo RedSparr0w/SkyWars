@@ -1,12 +1,3 @@
-#---------------------------------#
-#                                 #
-#      SKYWARS : GOLD RUSH        #
-#          by Nixinova            #
-#                                 #
-#      Always-running commands    #
-#                                 #
-#---------------------------------#
-
 # Player count test
 execute store result score lobby sw.players if entity @a[team=lobby,nbt={Dimension:"skywars:skywars"}]
 execute store result score ready sw.players if entity @a[team=ready,nbt={Dimension:"skywars:skywars"}]
