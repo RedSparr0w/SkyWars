@@ -1,6 +1,6 @@
 
 #> Reset the scoreboard so this isn't run multiple times
-scoreboard players set @s pt.info 0
+scoreboard players set @s sw.info 0
 
 tellraw @s [" "]
 tellraw @s [" "]
