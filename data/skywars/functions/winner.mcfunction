@@ -1,4 +1,7 @@
-# TODO: Delay TP of winner, summon fireworks
+
+#> TODO: Delay TP of winner, summon fireworks
+# /summon firework_rocket ~ ~1 ~ {LifeTime:25,FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Flight:1,Explosions:[{Type:1,Flicker:1,Trail:1,Colors:[I;1973019,11743532],FadeColors:[I;1973019,8073150]}]}}}}
+
 
 execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] unless entity @s[scores={sw.deaths=1..}] run tag @s add winner
 scoreboard players add @a[tag=winner] sw.wins 1
