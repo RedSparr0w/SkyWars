@@ -51,6 +51,7 @@ scoreboard objectives add sw.startgame trigger
 scoreboard objectives add sw.leave trigger
 
 #> Force Load area needed
+execute in minecraft:overworld run forceload add 0 0
 execute in skywars:skywars run forceload add 0 0
 
 ### LOBBY ###
