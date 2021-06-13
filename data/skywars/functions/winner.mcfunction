@@ -7,10 +7,8 @@
 #                                 
 #---------------------------------
 
-scoreboard players set ingame players 0
-
-scoreboard players add @a[team=playing] wins 1
-scoreboard players reset * deaths
+scoreboard players add @a[team=playing] sw.wins 1
+scoreboard players reset * sw.deaths
 
 tellraw @a[nbt={Dimension:"skywars:skywars"}] ["",{"selector":"@a[team=playing]","color":"green"},{"text":" has won!","color":"green"}]
 title @a[nbt={Dimension:"skywars:skywars"}] title {"selector":"@a[team=playing]","color":"green"}

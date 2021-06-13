@@ -58,4 +58,4 @@ execute in skywars:skywars run clone 26 206 -3 26 206 -3 78 77 11 replace
 
 title @a[nbt={Dimension:"skywars:skywars"}] actionbar [{"text":"Loading map: ","color":"yellow"},{"text":"100% complete","color":"green"}]
 
-kill @e[type=item,nbt={Dimension:"skywars:skywars"}]
+execute in skywars:skywars run kill @e[type=item]

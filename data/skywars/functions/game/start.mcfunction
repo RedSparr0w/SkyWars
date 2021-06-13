@@ -7,14 +7,11 @@
 #                                 
 #---------------------------------
 
-scoreboard players set ingame players 1
-
 tellraw @a[nbt={Dimension:"skywars:skywars"}] {"text":"Game starting!","color":"green"}
 title @a[nbt={Dimension:"skywars:skywars"}] title {"text":"Game starting!","color":"green"}
 
 team join playing @a[team=ready,nbt={Dimension:"skywars:skywars"}]
-scoreboard players reset @a kills
-scoreboard players reset count players_ready
+scoreboard players reset @a sw.kills
 clear @a[team=playing]
 gamemode adventure @a[team=playing]
 effect give @a[team=playing] minecraft:resistance 15 4
@@ -23,39 +20,39 @@ setblock 24 206 7 redstone_block
 
 #tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] {"text":"Resetting map, expect lag...","color":"red","italic":true}
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Resetting map","color":"red"}
-function skywars:clearmap
+function skywars:map/clear
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map cleared.","color":"green"}
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Loading new map...","color":"yellow"}
-function skywars:loadmap
+function skywars:map/load
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map loaded.","color":"green"}
 
 # Starting positions
-tp @a[tag=1] 61 74 26
-tp @a[tag=2] 42 74 -27
-tp @a[tag=3] 10 74 26
-tp @a[tag=4] -10 74 -27
-tp @a[tag=5] 78 74 11
-tp @a[tag=6] -27 74 -11
-tp @a[tag=7] 62 74 -27
-tp @a[tag=8] -10 74 26
-tp @a[tag=9] 41 74 26
-tp @a[tag=10] 11 74 -27
-tp @a[tag=11] 78 74 -11
-tp @a[tag=12] -27 74 11
+tp @a[tag=sw1] 61 74 26
+tp @a[tag=sw2] 42 74 -27
+tp @a[tag=sw3] 10 74 26
+tp @a[tag=sw4] -10 74 -27
+tp @a[tag=sw5] 78 74 11
+tp @a[tag=sw6] -27 74 -11
+tp @a[tag=sw7] 62 74 -27
+tp @a[tag=sw8] -10 74 26
+tp @a[tag=sw9] 41 74 26
+tp @a[tag=sw10] 11 74 -27
+tp @a[tag=sw11] 78 74 -11
+tp @a[tag=sw12] -27 74 11
 
 # Tag cleanup
-tag @a[team=playing] remove 1
-tag @a[team=playing] remove 2
-tag @a[team=playing] remove 3
-tag @a[team=playing] remove 4
-tag @a[team=playing] remove 5
-tag @a[team=playing] remove 6
-tag @a[team=playing] remove 7
-tag @a[team=playing] remove 8
-tag @a[team=playing] remove 9
-tag @a[team=playing] remove 10
-tag @a[team=playing] remove 11
-tag @a[team=playing] remove 12
+tag @a[team=playing] remove sw1
+tag @a[team=playing] remove sw2
+tag @a[team=playing] remove sw3
+tag @a[team=playing] remove sw4
+tag @a[team=playing] remove sw5
+tag @a[team=playing] remove sw6
+tag @a[team=playing] remove sw7
+tag @a[team=playing] remove sw8
+tag @a[team=playing] remove sw9
+tag @a[team=playing] remove sw10
+tag @a[team=playing] remove sw11
+tag @a[team=playing] remove sw12
 
 # Cages
 execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run setblock ~ 77 ~ glass

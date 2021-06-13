@@ -1,11 +1,7 @@
-#---------------------------------
-#                                 
-#      SKYWARS : GOLD RUSH        
-#          by Nixinova            
-#                                 
-#        Readying commands        
-#                                 
-#---------------------------------
+# Reset the scoreboard so this isn't run multiple times
+scoreboard players set @s sw.ready 0
+
+# TODO: check if game already in progress
 
 # Clear all tags first
 tag @s remove sw1
@@ -36,5 +32,9 @@ execute unless entity @a[tag=sw11] run tag @s add sw11
 execute unless entity @a[tag=sw12] run tag @s add sw12
 
 # Final commands
-tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
+execute unless entity @s[team=ready] run tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
 team join ready @s
+
+# Check how many players are ready
+scoreboard players set ready players 0
+execute as @a[team=ready] run scoreboard players add ready players 1
