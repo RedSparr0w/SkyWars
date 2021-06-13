@@ -24,7 +24,6 @@ execute in skywars:skywars run item replace entity @a[team=!spectator,x=25,y=138
 
 # Lobby commands
 execute in skywars:skywars run kill @e[type=item,x=25,y=138,z=1,distance=..10]
-effect clear @a[x=25,y=138,z=1,distance=..10,nbt={Dimension:"skywars:skywars"}]
 effect give @a[x=25,y=138,z=1,distance=..10,nbt={Dimension:"skywars:skywars"}] minecraft:instant_health 1 10 true
 effect give @a[x=25,y=138,z=1,distance=..10,nbt={Dimension:"skywars:skywars"}] minecraft:saturation 1 10 true
 

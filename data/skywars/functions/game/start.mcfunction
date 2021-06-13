@@ -13,6 +13,7 @@ title @a[nbt={Dimension:"skywars:skywars"}] title {"text":"Game starting!","colo
 team join playing @a[team=ready,nbt={Dimension:"skywars:skywars"}]
 scoreboard players reset @a sw.kills
 clear @a[team=playing]
+effect clear @a[team=playing]
 gamemode adventure @a[team=playing]
 effect give @a[team=playing] minecraft:resistance 15 4
 
