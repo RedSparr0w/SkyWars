@@ -2,7 +2,7 @@
 execute store result score lobby sw.players if entity @a[team=lobby,nbt={Dimension:"skywars:skywars"}]
 execute store result score ready sw.players if entity @a[team=ready,nbt={Dimension:"skywars:skywars"}]
 execute store result score alive sw.players if entity @a[team=playing,nbt={Dimension:"skywars:skywars"}]
-execute if score alive sw.players matches 1 run function skywars:winner
+execute if score alive sw.players matches 1 run function skywars:game/winner
 
 # Lobby hotbar
 execute in skywars:skywars run item replace entity @a[team=!spectator,x=25,y=138,z=1,distance=..11] hotbar.0 with diamond_sword{display:{Name:'"\\u00A7eLobby Blade"',Lore:['"\\u00A7cFight in the lobby!"']},Enchantments:[{id:"knockback",lvl:2}],Unbreakable:true,HideFlags:127}
