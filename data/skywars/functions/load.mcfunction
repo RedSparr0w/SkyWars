@@ -115,3 +115,6 @@ execute in skywars:skywars run setblock 27 206 -4 structure_block{mode:LOAD,name
 execute in skywars:skywars run setblock 26 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s2",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 25 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s3",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 24 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s4",posX:-5,posY:-18,posZ:-6}
+
+function skywars:map/clear
+function skywars:map/load

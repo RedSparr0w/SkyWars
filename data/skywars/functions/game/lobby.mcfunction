@@ -13,4 +13,5 @@ execute unless score #inventory sw.dummy matches 0 run tellraw @s [{"text":"Inve
 execute unless score #inventory sw.dummy matches 0 run scoreboard players add #errors sw.dummy 1
 
 # TP to lobby if no errors
+execute in skywars:skywars unless block 26 139 7 minecraft:smooth_quartz run function skywars:load
 execute if score #errors sw.dummy matches 0 run function skywars:game/lobby/success

@@ -110,8 +110,6 @@ give @a[team=playing,scores={sw.kit=7}] bread 8
 give @a[team=playing,scores={sw.kit=8}] fishing_rod{Enchantments:[{id:"minecraft:knockback",lvl:1}]}
 give @a[team=playing,scores={sw.kit=8}] cod 12
 
-tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] {"text":"Starting!","color":"yellow"}
-execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~ ~ ~ ~-3 ~ air
-
-# Change to survival mode
-gamemode survival @a[team=playing]
+# Start the countdown
+scoreboard players set #countdown sw.dummy 4
+schedule function skywars:game/countdown 2s
