@@ -1,5 +1,3 @@
-# TODO: multiple maps
-
 # Load our map
 execute if score #map sw.dummy matches 0 run function skywars:map/maps/goldrush
 execute if score #map sw.dummy matches 1 run function skywars:map/maps/mario
