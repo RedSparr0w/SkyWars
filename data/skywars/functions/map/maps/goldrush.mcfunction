@@ -83,68 +83,68 @@ execute in skywars:skywars run fill 24 68 0 24 69 0 air
 #   Island 1
 execute in skywars:skywars run setblock 61 77 26 structure_block{mode:LOAD,name:"skywars:isle_n1",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 61 78 26 redstone_block
-#execute in skywars:skywars run fill 61 77 26 61 78 26 air
+execute in skywars:skywars run fill 61 77 26 61 78 26 air
 
 #   Island 2
 execute in skywars:skywars run setblock 41 77 26 structure_block{mode:LOAD,name:"skywars:isle_n2",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 41 78 26 redstone_block
-#execute in skywars:skywars run fill 41 77 26 41 78 26 air
+execute in skywars:skywars run fill 41 77 26 41 78 26 air
 
 #   Island 3
 execute in skywars:skywars run setblock 10 77 26 structure_block{mode:LOAD,name:"skywars:isle_n3",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 10 78 26 redstone_block
-#execute in skywars:skywars run fill 10 77 26 10 78 26 air
+execute in skywars:skywars run fill 10 77 26 10 78 26 air
 
 #   Island 4
 execute in skywars:skywars run setblock -10 77 26 structure_block{mode:LOAD,name:"skywars:isle_n4",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock -10 78 26 redstone_block
-#execute in skywars:skywars run fill -10 77 26 -10 78 26 air
+execute in skywars:skywars run fill -10 77 26 -10 78 26 air
 
 #  East-facing islands
 
 #   Island 5
 execute in skywars:skywars run setblock -27 77 11 structure_block{mode:LOAD,name:"skywars:isle_e1",posX:-6,posY:-18,posZ:-5}
 execute in skywars:skywars run setblock -27 78 11 redstone_block
-#execute in skywars:skywars run fill -27 77 11 -27 78 11 air
+execute in skywars:skywars run fill -27 77 11 -27 78 11 air
 
 #   Island 6
 execute in skywars:skywars run setblock -27 77 -11 structure_block{mode:LOAD,name:"skywars:isle_e2",posX:-6,posY:-18,posZ:-5}
 execute in skywars:skywars run setblock -27 78 -11 redstone_block
-#execute in skywars:skywars run fill -27 77 -11 -27 78 -11 air
+execute in skywars:skywars run fill -27 77 -11 -27 78 -11 air
 
 #  South-facing islands
 
 #   Island 7
 execute in skywars:skywars run setblock -10 77 -27 structure_block{mode:LOAD,name:"skywars:isle_s1",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock -10 78 -27 redstone_block
-#execute in skywars:skywars run fill -10 77 -27 -10 78 -27 air
+execute in skywars:skywars run fill -10 77 -27 -10 78 -27 air
 
 #   Island 8
 execute in skywars:skywars run setblock 11 77 -27 structure_block{mode:LOAD,name:"skywars:isle_s2",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 11 78 -27 redstone_block
-#execute in skywars:skywars run fill 11 77 -27 11 78 -27 air
+execute in skywars:skywars run fill 11 77 -27 11 78 -27 air
 
 #   Island 9
 execute in skywars:skywars run setblock 42 77 -27 structure_block{mode:LOAD,name:"skywars:isle_s3",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 42 78 -27 redstone_block
-#execute in skywars:skywars run fill 42 77 -27 42 78 -27 air
+execute in skywars:skywars run fill 42 77 -27 42 78 -27 air
 
 #   Island 10
 execute in skywars:skywars run setblock 62 77 -27 structure_block{mode:LOAD,name:"skywars:isle_s4",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 62 78 -27 redstone_block
-#execute in skywars:skywars run fill 62 77 -27 62 78 -27 air
+execute in skywars:skywars run fill 62 77 -27 62 78 -27 air
 
 #  West-facing islands
 
 #   Island 11
 execute in skywars:skywars run setblock 78 77 -11 structure_block{mode:LOAD,name:"skywars:isle_w1",posX:-6,posY:-18,posZ:-5}
 execute in skywars:skywars run setblock 78 78 -11 redstone_block
-#execute in skywars:skywars run fill 78 77 -11 78 78 -11 air
+execute in skywars:skywars run fill 78 77 -11 78 78 -11 air
 
 #   Island 12
 execute in skywars:skywars run setblock 78 77 11 structure_block{mode:LOAD,name:"skywars:isle_w2",posX:-6,posY:-18,posZ:-5}
 execute in skywars:skywars run setblock 78 78 11 redstone_block
-#execute in skywars:skywars run fill 78 77 11 78 78 11 air
+execute in skywars:skywars run fill 78 77 11 78 78 11 air
 
 
 
