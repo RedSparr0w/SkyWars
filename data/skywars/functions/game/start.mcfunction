@@ -68,15 +68,15 @@ give @a[team=playing,scores={sw.kit=1}] iron_pickaxe{Enchantments:[{id:"minecraf
 give @a[team=playing,scores={sw.kit=1}] stone 10
 
 # Witch
-give @a[team=playing,scores={sw.kit=2}] splash_potion{Potion:harming} 2
-give @a[team=playing,scores={sw.kit=2}] splash_potion{Potion:weakness}
-give @a[team=playing,scores={sw.kit=2}] splash_potion{Potion:slowness}
+give @a[team=playing,scores={sw.kit=2}] splash_potion{Potion:"harming"} 2
+give @a[team=playing,scores={sw.kit=2}] splash_potion{Potion:"weakness"}
+give @a[team=playing,scores={sw.kit=2}] splash_potion{Potion:"slowness"}
 
 # Nurse
-give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:healing}
-give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:strong_healing}
-give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:regeneration}
-give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:strong_regeneration}
+give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:"healing"}
+give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:"strong_healing"}
+give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:"regeneration"}
+give @a[team=playing,scores={sw.kit=3}] splash_potion{Potion:"strong_regeneration"}
 
 # Marksman
 give @a[team=playing,scores={sw.kit=4}] bow
