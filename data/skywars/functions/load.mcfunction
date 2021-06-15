@@ -22,6 +22,9 @@ scoreboard objectives setdisplay sidebar.team.red sw.players
 scoreboard objectives setdisplay sidebar.team.gray sw.players
 scoreboard objectives setdisplay sidebar.team.green sw.players
 scoreboard objectives setdisplay sidebar.team.yellow sw.wins
+
+# Set some default scores
+scoreboard players set #map sw.dummy 0
 scoreboard players set #minimum sw.players 2
 scoreboard players set maximum sw.players 12
 
@@ -36,6 +39,8 @@ scoreboard objectives add sw.menu trigger
 scoreboard objectives add sw.info trigger
 # Join lobby
 scoreboard objectives add sw.lobby trigger
+# Map selection
+scoreboard objectives add sw.changemap trigger
 # Ready up
 scoreboard objectives add sw.ready trigger
 # Start game

@@ -4,6 +4,7 @@ execute as @a[scores={sw.menu=1..}] run function skywars:menu
 execute as @a[scores={sw.info=1..}] run function skywars:information
 execute as @a[scores={sw.lobby=1..}] run function skywars:game/lobby
 execute as @a[scores={sw.ready=1..}] run function skywars:game/ready
+execute as @a[scores={sw.changemap=1..}] run function skywars:map/change
 execute as @a[scores={sw.startgame=1..}] run function skywars:game/startsign
 execute as @a[scores={sw.leave=1..}] run function skywars:game/leave
 
@@ -17,6 +18,8 @@ scoreboard players reset @a[nbt={Dimension:"skywars:skywars"}] sw.lobby
 scoreboard players enable @a[nbt=!{Dimension:"skywars:skywars"}] sw.lobby
 
 # Cannot use outside skywars dimension
+scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.changemap
+scoreboard players reset @a[nbt=!{Dimension:"skywars:skywars"}] sw.changemap
 scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.ready
 scoreboard players reset @a[nbt=!{Dimension:"skywars:skywars"}] sw.ready
 scoreboard players enable @a[nbt={Dimension:"skywars:skywars"}] sw.startgame
