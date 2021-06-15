@@ -1,3 +1,10 @@
+#---------------------------------
+#                                 
+#      SKYWARS : GOLD RUSH        
+#          by Nixinova            
+#                                 
+#---------------------------------
+
 ### MAP LOADING ###
 
 # Western Middle
