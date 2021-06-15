@@ -55,7 +55,7 @@ execute in skywars:skywars run fill 51 69 -25 51 70 -25 air
 
 execute in skywars:skywars run setblock 26 91 60 structure_block{mode:LOAD,name:"skywars:mario-island-player-1",posX:-6,posY:-32,posZ:-7}
 execute in skywars:skywars run setblock 26 92 60 redstone_block
-#execute in skywars:skywars run fill 26 91 60 26 92 60 air
+execute in skywars:skywars run fill 26 91 60 26 92 60 air
 
 execute in skywars:skywars run setblock -34 91 0 structure_block{mode:LOAD,name:"skywars:mario-island-player-1",posX:7,posY:-32,posZ:-6,rotation:"CLOCKWISE_90"}
 execute in skywars:skywars run setblock -34 92 0 redstone_block
@@ -73,7 +73,7 @@ execute in skywars:skywars run fill 86 91 0 86 92 0 air
 
 execute in skywars:skywars run setblock 70 88 44 structure_block{mode:LOAD,name:"skywars:mario-island-player-3",posX:-7,posY:-29,posZ:-7}
 execute in skywars:skywars run setblock 70 89 44 redstone_block
-#execute in skywars:skywars run fill 70 88 44 70 89 44 air
+execute in skywars:skywars run fill 70 88 44 70 89 44 air
 
 execute in skywars:skywars run setblock -18 88 44 structure_block{mode:LOAD,name:"skywars:mario-island-player-3",posX:7,posY:-29,posZ:-7,rotation:"CLOCKWISE_90"}
 execute in skywars:skywars run setblock -18 89 44 redstone_block
@@ -91,7 +91,7 @@ execute in skywars:skywars run fill 70 88 -44 70 89 -44 air
 
 execute in skywars:skywars run setblock 1 81 57 structure_block{mode:LOAD,name:"skywars:mario-island-player-2",posX:-6,posY:-22,posZ:-6}
 execute in skywars:skywars run setblock 1 82 57 redstone_block
-#execute in skywars:skywars run fill 1 81 57 1 82 57 air
+execute in skywars:skywars run fill 1 81 57 1 82 57 air
 
 execute in skywars:skywars run setblock 1 81 -57 structure_block{mode:LOAD,name:"skywars:mario-island-player-2",posX:6,posY:-22,posZ:-6,rotation:"CLOCKWISE_90"}
 execute in skywars:skywars run setblock 1 82 -57 redstone_block
