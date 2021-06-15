@@ -16,36 +16,8 @@ title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Load
 function skywars:map/load
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map loaded.","color":"green"}
 
-# Starting positions
-execute in skywars:skywars run tp @a[tag=sw1] 61 74 26
-execute in skywars:skywars run tp @a[tag=sw2] 42 74 -27
-execute in skywars:skywars run tp @a[tag=sw3] 10 74 26
-execute in skywars:skywars run tp @a[tag=sw4] -10 74 -27
-execute in skywars:skywars run tp @a[tag=sw5] 78 74 11
-execute in skywars:skywars run tp @a[tag=sw6] -27 74 -11
-execute in skywars:skywars run tp @a[tag=sw7] 62 74 -27
-execute in skywars:skywars run tp @a[tag=sw8] -10 74 26
-execute in skywars:skywars run tp @a[tag=sw9] 41 74 26
-execute in skywars:skywars run tp @a[tag=sw10] 11 74 -27
-execute in skywars:skywars run tp @a[tag=sw11] 78 74 -11
-execute in skywars:skywars run tp @a[tag=sw12] -27 74 11
-
-# Tag cleanup
-tag @a[team=playing] remove sw1
-tag @a[team=playing] remove sw2
-tag @a[team=playing] remove sw3
-tag @a[team=playing] remove sw4
-tag @a[team=playing] remove sw5
-tag @a[team=playing] remove sw6
-tag @a[team=playing] remove sw7
-tag @a[team=playing] remove sw8
-tag @a[team=playing] remove sw9
-tag @a[team=playing] remove sw10
-tag @a[team=playing] remove sw11
-tag @a[team=playing] remove sw12
-
 # Cages
-execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run setblock ~ 77 ~ glass
+execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run setblock ~ -1 ~ glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=0}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 glass replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=1}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 barrier replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=2}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 light_blue_stained_glass replace glass
@@ -62,6 +34,20 @@ execute in skywars:skywars run execute as @a[scores={sw.cage=12}] at @s run fill
 execute in skywars:skywars run execute as @a[scores={sw.cage=12}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 iron_trapdoor replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=13}] at @s run fill ~ ~3 ~ ~ ~-2 ~ oak_wood replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=13}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 oak_leaves[persistent=true] replace glass
+
+# Tag cleanup
+tag @a[team=playing] remove sw1
+tag @a[team=playing] remove sw2
+tag @a[team=playing] remove sw3
+tag @a[team=playing] remove sw4
+tag @a[team=playing] remove sw5
+tag @a[team=playing] remove sw6
+tag @a[team=playing] remove sw7
+tag @a[team=playing] remove sw8
+tag @a[team=playing] remove sw9
+tag @a[team=playing] remove sw10
+tag @a[team=playing] remove sw11
+tag @a[team=playing] remove sw12
 
 # Miner
 give @a[team=playing,scores={sw.kit=1}] iron_pickaxe{Enchantments:[{id:"minecraft:efficiency",lvl:3}]}

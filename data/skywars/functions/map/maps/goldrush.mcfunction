@@ -145,3 +145,20 @@ execute in skywars:skywars run fill 78 77 -11 78 78 -11 air
 execute in skywars:skywars run setblock 78 77 11 structure_block{mode:LOAD,name:"skywars:isle_w2",posX:-6,posY:-18,posZ:-5}
 execute in skywars:skywars run setblock 78 78 11 redstone_block
 execute in skywars:skywars run fill 78 77 11 78 78 11 air
+
+
+
+### PLAYER SPAWNING ###
+
+execute in skywars:skywars run tp @a[tag=sw1] 61 74 26
+execute in skywars:skywars run tp @a[tag=sw2] 42 74 -27
+execute in skywars:skywars run tp @a[tag=sw3] 10 74 26
+execute in skywars:skywars run tp @a[tag=sw4] -10 74 -27
+execute in skywars:skywars run tp @a[tag=sw5] 78 74 11
+execute in skywars:skywars run tp @a[tag=sw6] -27 74 -11
+execute in skywars:skywars run tp @a[tag=sw7] 62 74 -27
+execute in skywars:skywars run tp @a[tag=sw8] -10 74 26
+execute in skywars:skywars run tp @a[tag=sw9] 41 74 26
+execute in skywars:skywars run tp @a[tag=sw10] 11 74 -27
+execute in skywars:skywars run tp @a[tag=sw11] 78 74 -11
+execute in skywars:skywars run tp @a[tag=sw12] -27 74 11
