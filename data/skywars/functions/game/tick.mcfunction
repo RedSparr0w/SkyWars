@@ -25,4 +25,6 @@ team join spectator @a[team=playing,scores={sw.deaths=1..},nbt={Dimension:"skywa
 gamemode spectator @a[team=spectator,nbt={Dimension:"skywars:skywars"}]
 
 # TODO: Instantly kill players if they fall below y=0
-# TODO: Ignite TNT when placed?
+
+# TODO: Add settings to enable/disable auto igniting TNT
+execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 minecraft:command_block{auto:1b,Command:"function skywars:game/summon_tnt"} replace minecraft:tnt
