@@ -20,7 +20,10 @@ title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map 
 execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] run function skywars:game/spread
 
 # Cages
-execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run setblock ~ -1 ~ glass
+execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~-1 ~ ~ ~3 ~ glass replace
+execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~-1 ~ ~ ~1 ~2 ~ glass replace
+execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~ ~-1 ~ ~2 ~1 glass replace
+execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~ ~ ~ ~ ~2 ~ air replace
 execute in skywars:skywars run execute as @a[scores={sw.cage=0}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 glass replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=1}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 barrier replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=2}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 light_blue_stained_glass replace glass

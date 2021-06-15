@@ -63,12 +63,12 @@ execute in skywars:skywars run fill 33 142 -7 19 142 7 white_stained_glass
 execute in skywars:skywars run setblock 25 139 -6 dark_oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger sw.changemap"}}',Text2:'{"text":"Change Map","color":"#3498db"}'}
 execute in skywars:skywars run setblock 26 139 -6 dark_oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger sw.ready"}}',Text2:'{"text":"Ready","color":"#f1c40f"}'}
 execute in skywars:skywars run setblock 27 139 -6 dark_oak_wall_sign[facing=south]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"trigger sw.startgame"}}',Text2:'{"text":"Start","color":"#2ecc71"}'}
-execute in skywars:skywars run setblock 27 139 6 dark_oak_wall_sign{Text1:'{"text":"Made by","color":"#ecf0f1","clickEvent":{"action":"run_command","value":"trigger sw.info"}}',Text2:'{"text":"Nixinova","color":"#1abc9c"}',Text3:'{"text":"RedSparr0vv","color":"#e74c3c"}'}
+execute in skywars:skywars run setblock 27 139 6 dark_oak_wall_sign{Text1:'{"text":"Made by","color":"#ecf0f1","clickEvent":{"action":"run_command","value":"trigger sw.info"}}',Text2:'{"text":"RedSparr0vv","color":"#e74c3c"}',Text3:'{"text":"Nixinova","color":"#1abc9c"}'}
 execute in skywars:skywars run setblock 25 139 6 dark_oak_wall_sign{Text2:'{"text":"SkyWars v3.0","color":"#2ecc71","clickEvent":{"action":"run_command","value":"trigger sw.menu"}}',Text3:'{"text":"Menu","color":"#3498db"}'}
 
 # Credit
 execute in skywars:skywars run setblock 27 140 6 player_wall_head{SkullOwner:{Name:"RedSparr0vv"}}
-execute in skywars:skywars run setblock 26 140 6 player_wall_head{SkullOwner:{Name:"Nixinova"}}
+execute in skywars:skywars run setblock 25 140 6 player_wall_head{SkullOwner:{Name:"Nixinova"}}
 
 # Clear then Load map
 function skywars:map/clear
