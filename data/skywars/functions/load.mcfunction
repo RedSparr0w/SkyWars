@@ -23,6 +23,7 @@ scoreboard objectives setdisplay sidebar.team.gray sw.players
 scoreboard objectives setdisplay sidebar.team.green sw.players
 scoreboard objectives setdisplay sidebar.team.yellow sw.wins
 scoreboard players set #minimum sw.players 2
+scoreboard players set maximum sw.players 12
 
 #> Triggers
 # Starting kits

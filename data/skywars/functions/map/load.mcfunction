@@ -6,3 +6,6 @@ function skywars:map/maps/mario
 title @a[nbt={Dimension:"skywars:skywars"}] actionbar [{"text":"Loading map: ","color":"yellow"},{"text":"100% complete","color":"green"}]
 
 execute in skywars:skywars run kill @e[type=item,distance=..500]
+
+execute store result score maximum sw.players if entity @e[tag=SkyWarsSpawnPoint]
+

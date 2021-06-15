@@ -6,7 +6,7 @@ scoreboard players set @a sw.deaths 0
 clear @a[team=playing]
 effect clear @a[team=playing]
 gamemode adventure @a[team=playing]
-effect give @a[team=playing] minecraft:resistance 15 4
+effect give @a[team=playing] minecraft:resistance 15 4 true
 
 #tellraw @a[team=playing,nbt={Dimension:"skywars:skywars"}] {"text":"Resetting map, expect lag...","color":"red","italic":true}
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Resetting map","color":"red"}
@@ -15,6 +15,9 @@ title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map 
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Loading new map...","color":"yellow"}
 function skywars:map/load
 title @a[team=playing,nbt={Dimension:"skywars:skywars"}] actionbar {"text":"Map loaded.","color":"green"}
+
+# Spawn the players in
+execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] run function skywars:game/spread
 
 # Cages
 execute in skywars:skywars run execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run setblock ~ -1 ~ glass
@@ -34,20 +37,6 @@ execute in skywars:skywars run execute as @a[scores={sw.cage=12}] at @s run fill
 execute in skywars:skywars run execute as @a[scores={sw.cage=12}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 iron_trapdoor replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=13}] at @s run fill ~ ~3 ~ ~ ~-2 ~ oak_wood replace glass
 execute in skywars:skywars run execute as @a[scores={sw.cage=13}] at @s run fill ~2 ~3 ~2 ~-2 ~-2 ~-2 oak_leaves[persistent=true] replace glass
-
-# Tag cleanup
-tag @a[team=playing] remove sw1
-tag @a[team=playing] remove sw2
-tag @a[team=playing] remove sw3
-tag @a[team=playing] remove sw4
-tag @a[team=playing] remove sw5
-tag @a[team=playing] remove sw6
-tag @a[team=playing] remove sw7
-tag @a[team=playing] remove sw8
-tag @a[team=playing] remove sw9
-tag @a[team=playing] remove sw10
-tag @a[team=playing] remove sw11
-tag @a[team=playing] remove sw12
 
 # Miner
 give @a[team=playing,scores={sw.kit=1}] iron_pickaxe{Enchantments:[{id:"minecraft:efficiency",lvl:3}]}
