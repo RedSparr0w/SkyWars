@@ -25,3 +25,4 @@ team join spectator @a[team=playing,scores={sw.deaths=1..},nbt={Dimension:"skywa
 gamemode spectator @a[team=spectator,nbt={Dimension:"skywars:skywars"}]
 
 # TODO: Instantly kill players if they fall below y=0
+# TODO: Ignite TNT when placed?
