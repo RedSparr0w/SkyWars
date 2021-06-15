@@ -1,6 +1,3 @@
-# Only announce ready if player not already ready
-tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]
-
 # Clear all tags first
 tag @s remove sw1
 tag @s remove sw2
@@ -40,3 +37,8 @@ execute unless entity @s[team=ready] run execute unless entity @a[tag=sw11] run 
 execute if entity @s[tag=sw11] run team join ready @s
 execute unless entity @s[team=ready] run execute unless entity @a[tag=sw12] run tag @s add sw12
 execute if entity @s[tag=sw12] run team join ready @s
+
+# Only announce ready if game not full
+execute unless entity @s[team=ready] run tellraw @s [{"text":"Sorry, But there's already 12 other players ready!","color":"red"}]
+# Only announce ready if player not already ready
+execute if entity @s[team=ready] run tellraw @a[nbt={Dimension:"skywars:skywars"}] [{"selector":"@s","color":"green"},{"text":" is now ready!","color":"green"}]

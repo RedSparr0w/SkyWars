@@ -42,7 +42,7 @@ scoreboard objectives add sw.startgame trigger
 # Leave game
 scoreboard objectives add sw.leave trigger
 
-#> Force Load area needed
+#> Force Load area needed (for creation and tp back to overworld)
 execute in minecraft:overworld run forceload add 0 0
 execute in skywars:skywars run forceload add 0 0
 
@@ -106,5 +106,6 @@ execute in skywars:skywars run setblock 26 206 -4 structure_block{mode:LOAD,name
 execute in skywars:skywars run setblock 25 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s3",posX:-5,posY:-18,posZ:-6}
 execute in skywars:skywars run setblock 24 206 -4 structure_block{mode:LOAD,name:"skywars:isle_s4",posX:-5,posY:-18,posZ:-6}
 
+# Clear then Load map
 function skywars:map/clear
 function skywars:map/load
