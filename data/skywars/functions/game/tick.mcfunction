@@ -29,3 +29,8 @@ gamemode spectator @a[team=spectator,nbt={Dimension:"skywars:skywars"}]
 # Auto ignite TNT when placed
 # TODO: Add settings to enable/disable auto igniting TNT
 execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~-5 ~-5 ~-5 ~5 ~5 ~5 minecraft:command_block{auto:1b,Command:"function skywars:game/summon_tnt"} replace minecraft:tnt
+
+# Auto convert raw materials to ingots
+execute in skywars:skywars run execute as @e[type=item,name="Raw Iron",distance=0..] run data modify entity @s Item.id set value "minecraft:iron_ingot"
+execute in skywars:skywars run execute as @e[type=item,name="Raw Gold",distance=0..] run data modify entity @s Item.id set value "minecraft:gold_ingot"
+execute in skywars:skywars run execute as @e[type=item,name="Raw Copper",distance=0..] run data modify entity @s Item.id set value "minecraft:copper_ingot"
