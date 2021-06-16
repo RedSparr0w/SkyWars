@@ -24,7 +24,7 @@
         {
           "type": "item",
           "name": "minecraft:snowball",
-          "weight": 4,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -51,7 +51,36 @@
               "conditions": [
                 {
                   "condition": "random_chance",
-                  "chance": 0.281
+                  "chance": 0.481
+                }
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.03,
+                "max": 0.84
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:netherite_sword",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "sharpness",
+                "knockback",
+                "fire_aspect",
+                "unbreaking"
+              ],
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.381
                 }
               ]
             },
@@ -67,22 +96,92 @@
         {
           "type": "item",
           "name": "minecraft:diamond_chestplate",
-          "weight": 2
+          "weight": 2,
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "protection",
+                "fire_protection",
+                "blast_protection",
+                "projectile_protection",
+                "unbreaking"
+              ],
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.45
+                }
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.03,
+                "max": 0.84
+              }
+            }
+          ]
         },
         {
           "type": "item",
           "name": "minecraft:diamond_helmet",
-          "weight": 2
+          "weight": 2,
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "protection",
+                "fire_protection",
+                "blast_protection",
+                "projectile_protection",
+                "unbreaking"
+              ],
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.45
+                }
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.03,
+                "max": 0.84
+              }
+            }
+          ]
         },
         {
           "type": "item",
           "name": "minecraft:diamond_boots",
-          "weight": 2
-        },
-        {
-          "type": "item",
-          "name": "minecraft:golden_chestplate",
-          "weight": 2
+          "weight": 2,
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "protection",
+                "fire_protection",
+                "blast_protection",
+                "projectile_protection",
+                "unbreaking"
+              ],
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.45
+                }
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.03,
+                "max": 0.84
+              }
+            }
+          ]
         },
         {
           "type": "item",
@@ -127,12 +226,58 @@
         {
           "type": "item",
           "name": "minecraft:diamond_axe",
-          "weight": 3
+          "weight": 3,
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "efficiency",
+                "unbreaking",
+                "sharpness"
+              ],
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.441
+                }
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.03,
+                "max": 0.84
+              }
+            }
+          ]
         },
         {
           "type": "item",
           "name": "minecraft:diamond_pickaxe",
-          "weight": 3
+          "weight": 3,
+          "functions": [
+            {
+              "function": "enchant_randomly",
+              "enchantments": [
+                "efficiency",
+                "unbreaking",
+                "fortune"
+              ],
+              "conditions": [
+                {
+                  "condition": "random_chance",
+                  "chance": 0.441
+                }
+              ]
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.03,
+                "max": 0.84
+              }
+            }
+          ]
         },
         {
           "type": "item",
@@ -160,22 +305,49 @@
         {
           "type": "item",
           "name": "minecraft:arrow",
-          "weight": 3
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 6,
+                "max": 32
+              }
+            },
+            {
+              "function": "minecraft:limit_count",
+              "limit": {
+                "min": 0,
+                "max": 32
+              }
+            }
+          ]
         },
         {
           "type": "item",
           "name": "minecraft:tnt",
-          "weight": 3
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            },
+            {
+              "function": "minecraft:limit_count",
+              "limit": {
+                "min": 0,
+                "max": 4
+              }
+            }
+          ]
         },
         {
           "type": "item",
           "name": "minecraft:flint_and_steel",
           "weight": 3
-        },
-        {
-          "type": "item",
-          "name": "minecraft:diamond_sword",
-          "weight": 2
         },
         {
           "type": "item",
