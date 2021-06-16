@@ -34,3 +34,4 @@ execute as @a[team=playing,nbt={Dimension:"skywars:skywars"}] at @s run fill ~-5
 execute in skywars:skywars run execute as @e[type=item,name="Raw Iron",distance=0..] run data modify entity @s Item.id set value "minecraft:iron_ingot"
 execute in skywars:skywars run execute as @e[type=item,name="Raw Gold",distance=0..] run data modify entity @s Item.id set value "minecraft:gold_ingot"
 execute in skywars:skywars run execute as @e[type=item,name="Raw Copper",distance=0..] run data modify entity @s Item.id set value "minecraft:copper_ingot"
+execute in skywars:skywars run execute as @e[type=item,name="Ancient Debris",distance=0..] run data modify entity @s Item.id set value "minecraft:netherite_ingot"
