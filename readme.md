@@ -1,7 +1,7 @@
 # SkyWars
 
 ![SkyWars banner](https://github.com/RedSparr0w/SkyWars/blob/main/banner.png?raw=true)
-[PlanetMinecraft](https://www.planetminecraft.com/project/skywars-4064694/)
+[PlanetMinecraft](https://www.planetminecraft.com/data-pack/1-17-skywars-vanilla/)
 
 ## About:
 
