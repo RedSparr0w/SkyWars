@@ -5,7 +5,7 @@
 
 ## About:
 
-Made for Minecraft 1.17+
+Made for Minecraft 1.17 - 1.18+
 
 A fully-functional SkyWars datapack using custom dimensions in vanilla Minecraft.
 
